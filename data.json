@@ -1,11 +1,139 @@
 {
-  "games": {
-    "valorant": "Iron 3",
-    "val_elo": "New Season",
-    "minecraft": "Online",
-    "mc_motd": "",
-    "msfs_status": "目前沒有飛行計畫",
-    "msfs_aircraft": "A320-200 Neo"
-  },
-  "last_updated": "2026-05-04 22:15"
+    "last_updated": "2026-05-04 14:12:34",
+    "github_activity": [
+        {
+            "id": "11392645536",
+            "type": "PushEvent",
+            "actor": {
+                "id": 179312484,
+                "login": "InyTw",
+                "display_login": "InyTw",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/InyTw",
+                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
+            },
+            "repo": {
+                "id": 1060230572,
+                "name": "InyTw/inytw-web",
+                "url": "https://api.github.com/repos/InyTw/inytw-web"
+            },
+            "payload": {
+                "repository_id": 1060230572,
+                "push_id": 33684083106,
+                "ref": "refs/heads/main",
+                "head": "91b146f69633163381076fc8739067a11cf7c26f",
+                "before": "fbba55f312908dfa7a78332328435f89fa37e2e7"
+            },
+            "public": true,
+            "created_at": "2026-05-04T14:12:25Z"
+        },
+        {
+            "id": "11392511479",
+            "type": "PushEvent",
+            "actor": {
+                "id": 179312484,
+                "login": "InyTw",
+                "display_login": "InyTw",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/InyTw",
+                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
+            },
+            "repo": {
+                "id": 1060230572,
+                "name": "InyTw/inytw-web",
+                "url": "https://api.github.com/repos/InyTw/inytw-web"
+            },
+            "payload": {
+                "repository_id": 1060230572,
+                "push_id": 33683949079,
+                "ref": "refs/heads/main",
+                "head": "fbba55f312908dfa7a78332328435f89fa37e2e7",
+                "before": "656e9e1b92fffa66bef5597b7f82a436f82d471a"
+            },
+            "public": true,
+            "created_at": "2026-05-04T14:09:19Z"
+        },
+        {
+            "id": "11333137588",
+            "type": "PushEvent",
+            "actor": {
+                "id": 179312484,
+                "login": "InyTw",
+                "display_login": "InyTw",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/InyTw",
+                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
+            },
+            "repo": {
+                "id": 1145807785,
+                "name": "InyTw/ohw-web",
+                "url": "https://api.github.com/repos/InyTw/ohw-web"
+            },
+            "payload": {
+                "repository_id": 1145807785,
+                "push_id": 33624526930,
+                "ref": "refs/heads/main",
+                "head": "b9e99e7229c5f10def4a2e6d15bc3343671ce17b",
+                "before": "401cae4190199c26c3acb36f0683d46c1828d6d9"
+            },
+            "public": true,
+            "created_at": "2026-05-02T18:38:41Z"
+        },
+        {
+            "id": "11321662279",
+            "type": "PushEvent",
+            "actor": {
+                "id": 179312484,
+                "login": "InyTw",
+                "display_login": "InyTw",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/InyTw",
+                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
+            },
+            "repo": {
+                "id": 1145807785,
+                "name": "InyTw/ohw-web",
+                "url": "https://api.github.com/repos/InyTw/ohw-web"
+            },
+            "payload": {
+                "repository_id": 1145807785,
+                "push_id": 33613038031,
+                "ref": "refs/heads/main",
+                "head": "401cae4190199c26c3acb36f0683d46c1828d6d9",
+                "before": "ea216d34addd48d99974d8a1daad7b9299a557be"
+            },
+            "public": true,
+            "created_at": "2026-05-02T09:11:52Z"
+        },
+        {
+            "id": "11038609213",
+            "type": "PushEvent",
+            "actor": {
+                "id": 179312484,
+                "login": "InyTw",
+                "display_login": "InyTw",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/InyTw",
+                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
+            },
+            "repo": {
+                "id": 1145807785,
+                "name": "InyTw/ohw-web",
+                "url": "https://api.github.com/repos/InyTw/ohw-web"
+            },
+            "payload": {
+                "repository_id": 1145807785,
+                "push_id": 33330281881,
+                "ref": "refs/heads/main",
+                "head": "ea216d34addd48d99974d8a1daad7b9299a557be",
+                "before": "e3f606c813a9c7adcbe168c8dd457c585479e2f6"
+            },
+            "public": true,
+            "created_at": "2026-04-25T16:21:58Z"
+        }
+    ],
+    "games": {
+        "minecraft": "Status Unavailable",
+        "valorant": "Error fetching rank"
+    }
 }
