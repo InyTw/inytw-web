@@ -1,0 +1,99 @@
+name: Real-time Gaming & GitHub Stats Update
+
+on:
+  schedule:
+    - cron: '0 * * * *' # 每小時自動執行一次
+  workflow_dispatch:      # 支援手動點擊按鈕執行
+  push:
+    branches: [ main ]    # 當你推送代碼時也會執行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Fetch Real-time Data
+        env:
+          GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+        run: |
+          python - <<EOF
+          import requests
+          import json
+          import os
+          from datetime import datetime
+
+          # 配置區 (請根據你的真實資訊修改)
+          GH_USERNAME = "InyTw"
+          MC_SERVER_IP = "ohw.cloud-ip.cc"
+          VAL_NAME = "InyTw"      # 不需要 # 號後的數字
+          VAL_TAG = ""       # 例如 TW1
+          
+          data = {
+              "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+              "github_activity": [],
+              "games": {}
+          }
+
+          # --- 1. 抓取 GitHub 動態 ---
+          try:
+              headers = {"Authorization": f"token {os.environ['GITHUB_TOKEN']}"}
+              res = requests.get(f"https://api.github.com/users/{GH_USERNAME}/events/public", headers=headers)
+              if res.status_code == 200:
+                  # 只取 PushEvent，且過濾掉與更新 data.json 相關的 commit
+                  events = res.json()
+                  commits = [e for e in events if e['type'] == 'PushEvent'][:5]
+                  data["github_activity"] = commits
+          except Exception as e:
+              print(f"GitHub Error: {e}")
+
+          # --- 2. 抓取 Minecraft 伺服器狀態 ---
+          try:
+              # 使用 mcstatus.io API
+              mc_res = requests.get(f"https://api.mcstatus.io/v2/status/public/{MC_SERVER_IP}").json()
+              if mc_res.get("online"):
+                  data["games"]["minecraft"] = f"Online ({mc_res['players']['online']} players)"
+                  data["games"]["mc_motd"] = mc_res.get("motd", {}).get("clean", "Welcome!")
+              else:
+                  data["games"]["minecraft"] = "Server Offline"
+          except Exception as e:
+              data["games"]["minecraft"] = "Status Unavailable"
+
+          # --- 3. 抓取 VALORANT 真實階級 ---
+          try:
+              # 使用 HenrikDev 的免費 API 端點
+              val_url = f"https://api.henrikdev.com/valorant/v1/mmr/ap/{VAL_NAME}/{VAL_TAG}"
+              val_res = requests.get(val_url).json()
+              if val_res.get("status") == 200:
+                  mmr_data = val_res.get("data", {})
+                  data["games"]["valorant"] = mmr_data.get("currenttierpatched", "Unranked")
+                  data["games"]["val_elo"] = mmr_data.get("elo", 0)
+              else:
+                  data["games"]["valorant"] = "API Limit/Private"
+          except Exception as e:
+              data["games"]["valorant"] = "Error fetching rank"
+
+          # --- 4. 寫入 JSON 檔案 ---
+          with open('data.json', 'w', encoding='utf-8') as f:
+              json.dump(data, f, ensure_ascii=False, indent=4)
+          
+          print("Data updated successfully!")
+          EOF
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "actions@github.com"
+          git add data.json
+          # 如果檔案沒有變化則跳過 commit
+          git commit -m "chore: updated real-time stats [skip ci]" || echo "No changes to commit"
+          git push

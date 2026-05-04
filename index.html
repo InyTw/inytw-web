@@ -1,64 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首頁 | InyTw</title>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="icon" href="https://yt3.googleusercontent.com/ktxXdANJ7KtKfgE1qyVFqsWm32YAxT4RBU_BpWOkx1kNYyVVhSHiO_KKa0ujKntuI0MVbz3FOQ=s160-c-k-c0x00ffffff-no-rj">
-  <script src="/js/bg.js"></script>
-  <script src="js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InyTwの森林檔案夾</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/png" href="assets/images/o_o.png">
 </head>
-<body>
 
-  <canvas id="bg-canvas"></canvas>
+<body class="min-h-screen flex items-center justify-center p-6 overflow-hidden">
 
-  <header>
-    <h1 id="welcome">👋 Today is </h1>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="news.html">NEWS</a>
-      <a href="links.html">WEBSITES</a>
-    </nav>
-  </header>
+    <!-- 背景影片 -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="assets/mp4/anime-girls-with-cats.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-overlay"></div>
 
-  <main>
-    <section class="card">
-      <h2>About Me</h2>
-      <p>
-        Hi! I’m <strong>InyTw</strong>, a passionate developer with experience in web development and open-source projects.
-        I love creating interactive and visually appealing web experiences.
-      </p>
-    </section>
+    <div class="text-center relative z-10 max-w-2xl w-full">
+        <div class="mb-8 inline-block animate__animated animate__zoomIn">
+            <div class="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-white/20 p-1 backdrop-blur-md shadow-2xl overflow-hidden">
+                <img src="assets/images/kasane-teto.gif" alt="Avatar" class="w-full h-full object-cover">
+            </div>
+        </div>
 
-    <section class="card">
-      <h2>Skills & Tools</h2>
-      <p>Languages / Tools I use:</p>
-      <ul>
-        <li>JavaScript (ES6+), Python, HTML, CSS</li>
-        <li>Git & GitHub</li>
-        <li>Node.js, Discord.js</li>
-        <li>React / Tailwind CSS</li>
-      </ul>
-    </section>
+        <!-- 標題區 -->
+        <div class="animate__animated animate__fadeInUp">
+            <h1 class="text-4xl md:text-6xl font-black glow-text mb-2">InyTwの森林檔案夾</h1>
+            <p class="text-white/70 font-medium tracking-[0.4em] text-xs md:text-sm">選擇要傳送的傳送門</p>
+        </div>
 
-    <section class="card">
-      <h2>Featured Project</h2>
-      <p>
-        <a href="https://github.com/InyTw?tab=repositories" target="_blank">Awesome Project</a> – A web-based tool that demonstrates interactive charts and modern UI.
-      </p>
-    </section>
+        <!-- 快速入口 -->
+        <div class="grid grid-cols-2 gap-6 mt-12 animate__animated animate__fadeInUp animate__delay-1s">
+            <a href="socials.html" class="nav-card p-6 rounded-[2rem] group">
+                <div class="text-4xl mb-3 transition group-hover:scale-125">🐱</div>
+                <div class="text-white font-bold tracking-widest">連結傳送門</div>
+                <div class="text-white/40 text-[10px] mt-1 font-light">Community & SNS</div>
+            </a>
+            <a href="games.html" class="nav-card p-6 rounded-[2rem] group">
+                <div class="text-4xl mb-3 transition group-hover:scale-125">🎮</div>
+                <div class="text-white font-bold tracking-widest">遊戲資訊傳送門</div>
+                <div class="text-white/40 text-[10px] mt-1 font-light">Game Status</div>
+            </a>
+        </div>
 
-    <section class="card">
-      <h2>Connect</h2>
-      <p>
-        Check out my other platforms:
-      </p>
-      <ul>
-        <li><a href="https://github.com/InyTw" target="_blank">GitHub</a></li>
-        <li><a href="links.html">More</a></li>
-      </ul>
-    </section>
-  </main>
+        <!-- 頁尾 -->
+        <div class="mt-16 text-white/20 text-[10px] tracking-widest animate__animated animate__fadeIn animate__delay-2s">
+            <p>© 2026 OHW NETWORK PROJECT. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+
 </body>
 </html>

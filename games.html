@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming | Forest Logs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/games.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="assets/css/games.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/png" href="assets/images/o_o.png">
+</head>
+
+<body class="min-h-screen p-8 flex flex-col items-center">
+
+    <!-- 背景影片 -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="assets/mp4/anime-girls-with-cats.3840x2160.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-overlay"></div>
+
+    <!-- 導覽列 -->
+    <nav class="bg-white/10 backdrop-blur-md px-8 py-3 flex gap-8 mb-12 rounded-full border border-white/20 animate__animated animate__fadeInDown">
+        <a href="index.html" class="text-white hover:text-purple-300 transition">✨ 主頁</a>
+        <a href="socials.html" class="text-white hover:text-purple-300 transition">🐱 社群</a>
+        <a href="games.html" class="text-white border-b-2 border-purple-400">🎮 遊戲</a>
+    </nav>
+
+    <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+        
+        <!-- VALORANT -->
+        <div class="stat-card p-8 border-l-4 border-red-600 animate__animated animate__fadeInLeft">
+            <p class="label mb-2 text-pink-300">VALORANT STATUS</p>
+            <h3 id="val-rank" class="text-4xl font-bold text-white mb-4">Fetching...</h3>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+                <div class="text-white/60">ELO: <span class="text-white" id="val-elo">--</span></div>
+                <div class="text-white/60">Region: <span class="text-white">AP</span></div>
+            </div>
+        </div>
+
+        <!-- Minecraft -->
+        <div class="stat-card p-8 border-l-4 border-green-400 animate__animated animate__fadeInRight">
+            <p class="label mb-2 text-green-300">MINECRAFT SERVER</p>
+            <h3 id="mc-server" class="text-3xl font-bold text-white mb-1">ohw Network</h3>
+            <p id="mc-status-text" class="text-green-300 text-sm mb-4">● No Service ...</p>
+            <p class="text-white/60 text-sm italic" id="mc-motd">Connecting to server pulse...</p>
+        </div>
+
+        <!-- MSFS -->
+        <div class="stat-card p-8 border-l-4 border-blue-400 md:col-span-2 animate__animated animate__fadeInUp">
+            <p class="label mb-2 text-blue-300">FLIGHT LOG (MSFS)</p>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <h3 id="msfs-status" class="text-2xl font-bold text-white">System Standby</h3>
+                <div class="mt-4 md:mt-0 text-right">
+                    <p class="text-white/80">Flight Records Synchronized</p>
+                    <p class="text-xs text-white/40 font-mono" id="last-updated">Last Sync: --</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
