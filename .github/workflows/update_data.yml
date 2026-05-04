@@ -6,6 +6,8 @@ on:
   workflow_dispatch:      # 支援手動點擊按鈕執行
   push:
     branches: [ main ]    # 當你推送代碼時也會執行
+permissions:
+  contents: write
 
 jobs:
   build:
