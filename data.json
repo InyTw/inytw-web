@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-06-03 20:47:28",
+    "last_updated": "2026-06-03 22:57:18",
     "github_activity": [
         {
             "id": "11845406674",
@@ -52,84 +52,6 @@
             },
             "public": true,
             "created_at": "2026-05-07T14:39:01Z"
-        },
-        {
-            "id": "11392730776",
-            "type": "PushEvent",
-            "actor": {
-                "id": 179312484,
-                "login": "InyTw",
-                "display_login": "InyTw",
-                "gravatar_id": "",
-                "url": "https://api.github.com/users/InyTw",
-                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
-            },
-            "repo": {
-                "id": 1060230572,
-                "name": "InyTw/inytw-web",
-                "url": "https://api.github.com/repos/InyTw/inytw-web"
-            },
-            "payload": {
-                "repository_id": 1060230572,
-                "push_id": 33684168161,
-                "ref": "refs/heads/main",
-                "head": "2767bcd4dc780f7c435eb6f409155b1594fdc21b",
-                "before": "7e908e7b4f09974a5d8359f33ee6373d9e67c457"
-            },
-            "public": true,
-            "created_at": "2026-05-04T14:14:45Z"
-        },
-        {
-            "id": "11392645536",
-            "type": "PushEvent",
-            "actor": {
-                "id": 179312484,
-                "login": "InyTw",
-                "display_login": "InyTw",
-                "gravatar_id": "",
-                "url": "https://api.github.com/users/InyTw",
-                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
-            },
-            "repo": {
-                "id": 1060230572,
-                "name": "InyTw/inytw-web",
-                "url": "https://api.github.com/repos/InyTw/inytw-web"
-            },
-            "payload": {
-                "repository_id": 1060230572,
-                "push_id": 33684083106,
-                "ref": "refs/heads/main",
-                "head": "91b146f69633163381076fc8739067a11cf7c26f",
-                "before": "fbba55f312908dfa7a78332328435f89fa37e2e7"
-            },
-            "public": true,
-            "created_at": "2026-05-04T14:12:25Z"
-        },
-        {
-            "id": "11392511479",
-            "type": "PushEvent",
-            "actor": {
-                "id": 179312484,
-                "login": "InyTw",
-                "display_login": "InyTw",
-                "gravatar_id": "",
-                "url": "https://api.github.com/users/InyTw",
-                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
-            },
-            "repo": {
-                "id": 1060230572,
-                "name": "InyTw/inytw-web",
-                "url": "https://api.github.com/repos/InyTw/inytw-web"
-            },
-            "payload": {
-                "repository_id": 1060230572,
-                "push_id": 33683949079,
-                "ref": "refs/heads/main",
-                "head": "fbba55f312908dfa7a78332328435f89fa37e2e7",
-                "before": "656e9e1b92fffa66bef5597b7f82a436f82d471a"
-            },
-            "public": true,
-            "created_at": "2026-05-04T14:09:19Z"
         }
     ],
     "games": {
