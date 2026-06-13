@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-06-13 15:24:48",
+    "last_updated": "2026-06-13 17:08:20",
     "github_activity": [
         {
             "id": "12937279028",
@@ -78,32 +78,6 @@
             },
             "public": true,
             "created_at": "2026-06-05T18:37:25Z"
-        },
-        {
-            "id": "11845406674",
-            "type": "PushEvent",
-            "actor": {
-                "id": 179312484,
-                "login": "InyTw",
-                "display_login": "InyTw",
-                "gravatar_id": "",
-                "url": "https://api.github.com/users/InyTw",
-                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
-            },
-            "repo": {
-                "id": 1060230572,
-                "name": "InyTw/inytw-web",
-                "url": "https://api.github.com/repos/InyTw/inytw-web"
-            },
-            "payload": {
-                "repository_id": 1060230572,
-                "push_id": 34136071253,
-                "ref": "refs/heads/main",
-                "head": "f51cc384894a778950ed022e12afc81cafd10910",
-                "before": "6b02c2ffdfd4db88f0d440e168bb6a52818100c5"
-            },
-            "public": true,
-            "created_at": "2026-05-14T09:20:53Z"
         }
     ],
     "games": {
