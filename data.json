@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-07-25 18:48:35",
+    "last_updated": "2026-07-25 20:04:10",
     "github_activity": [
         {
             "id": "14467299696",
@@ -78,32 +78,6 @@
             },
             "public": true,
             "created_at": "2026-06-25T20:38:31Z"
-        },
-        {
-            "id": "13875658669",
-            "type": "PushEvent",
-            "actor": {
-                "id": 179312484,
-                "login": "InyTw",
-                "display_login": "InyTw",
-                "gravatar_id": "",
-                "url": "https://api.github.com/users/InyTw",
-                "avatar_url": "https://avatars.githubusercontent.com/u/179312484?"
-            },
-            "repo": {
-                "id": 1145807785,
-                "name": "InyTw/ohw-web",
-                "url": "https://api.github.com/repos/InyTw/ohw-web"
-            },
-            "payload": {
-                "repository_id": 1145807785,
-                "push_id": 36163718779,
-                "ref": "refs/heads/main",
-                "head": "b7eda899f647cd58e78ac604f335f78370e95816",
-                "before": "33a600a59a810cacce6c015ea7457adbe10eb270"
-            },
-            "public": true,
-            "created_at": "2026-06-25T12:57:57Z"
         }
     ],
     "games": {
